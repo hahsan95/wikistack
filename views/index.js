@@ -6,3 +6,4 @@ const userPages = require("./userPages");
 const wikiPage = require("./wikiPage");
 
 module.exports = { addPage, editPage, main, userList, userPages, wikiPage };
+
