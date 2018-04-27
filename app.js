@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const index = require('./views/index.js');
 const {main} = require('./views/index.js');
+const { db } = require('./models');
 
 const app = express();
 
@@ -16,6 +17,11 @@ app.get('/', (req, res, next) => {
 })
 
 const PORT = 1337;
+
+db.authenticate().
+then(() => {
+  console.log('connected to the database');
+});
 
 app.listen(PORT, () => {
   console.log(`App listening in port ${PORT}`);
