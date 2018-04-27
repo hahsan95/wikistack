@@ -5,12 +5,13 @@ const { db, Page, User } = require('../models');
 
 router.get("/", async (req, res, next) => {
     const page = await Page.findAll();
-    console.log(page);
+    
     res.send(wikiPage(page));
 });
 
 router.post("/", async (req, res, next) => {
-    res.send("nothing");
+
+    res.json(req.body);
 });
 
 router.get("/add", async (req, res, next) => {
