@@ -10,15 +10,15 @@ const Page = db.define('page', {
   },
   slug: {
     type: Sequelize.STRING,
-    allowNull: false
+    allowNull: true
   },
   content: {
     type: Sequelize.TEXT,
-    allowNull: false
+    allowNull: true
   },
-  status: {
-    type: Sequelize.ENUM('open', 'closed')
-  }
+  // status: {
+  //   type: Sequelize.ENUM('open', 'closed')
+  // }
 });
 
 const User = db.define('user', {
