@@ -1,6 +1,8 @@
 const morgan = require('morgan');
 const express = require('express');
 const bodyParser = require('body-parser');
+const index = require('./views/index.js');
+const {main} = require('./views/index.js');
 
 const app = express();
 
@@ -10,7 +12,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
 app.get('/', (req, res, next) => {
-  res.send('hello world!');
+  res.send(main(''));
 })
 
 const PORT = 1337;

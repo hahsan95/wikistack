@@ -37,3 +37,4 @@ module.exports = (content) => html`<!DOCTYPE html>
       </div>
     </body>
   </html>`;
+
